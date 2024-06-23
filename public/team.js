@@ -115,12 +115,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-app.use('/https://api-web.nhle.com', (req, res) => {
-    const apiUrl = req.url;
-    const fullUrl = `https://api-web.nhle.com${apiUrl}`;
-    
-    console.log(`Proxying request to: ${fullUrl}`);  // Debugging line
-    
-    req.pipe(request(fullUrl)).pipe(res);
-});
