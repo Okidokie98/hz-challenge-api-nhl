@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (selectedTeam) {
          
-        fetch(`http://localhost:8080/https://api-web.nhle.com/v1/club-stats/${selectedTeamAbbreviation}/20232024/2`)
+        fetch(`https://hz-challenge-api-nhl.onrender.com/https://api-web.nhle.com/v1/club-stats/${selectedTeamAbbreviation}/20232024/2`)
           .then(response => response.json())
           .then(data => {
             console.log('Data fetched:', data);
