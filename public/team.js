@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (selectedTeam) {
         // Use the proxy URL
-        fetch(`https://hz-challenge-api-nhl.onrender.com/https://api-web.nhle.com/v1/club-stats/${selectedTeamAbbreviation}/20232024/2`)
+        fetch(`http://localhost:8080/https://api-web.nhle.com/v1/club-stats/${selectedTeamAbbreviation}/20232024/2`)
           .then(response => response.json())
           .then(data => {
             console.log('Data fetched:', data);
