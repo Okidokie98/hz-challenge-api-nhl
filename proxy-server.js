@@ -5,17 +5,17 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Enable CORS for all routes
 app.use(cors());
 
-// Proxy endpoint to bypass CORS
 app.use('/https://api-web.nhle.com', (req, res) => {
-  const url = 'https://api-web.nhle.com' + req.url;
-  req.pipe(request({ qs:req.query, uri: url })).pipe(res);
+    const apiUrl = req.url;  // This will capture the path and query parameters
+    const fullUrl = `https://api-web.nhle.com${apiUrl}`;
+    
+    console.log(`Proxying request to: ${fullUrl}`);  // Debugging line
+    
+    req.pipe(request(fullUrl)).pipe(res);
 });
 
-app.use(express.static('public'));
-
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    console.log(`Proxy server is running on port ${PORT}`);
 });
