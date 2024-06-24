@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 8080;
 // CORS instellen
 app.use(cors());
 
+// Proxy route instellen
 app.use('/proxy', (req, res) => {
     const apiUrl = req.url.replace('/proxy', '');  // Verwijder het /proxy gedeelte van de URL
     const fullUrl = `https://api-web.nhle.com${apiUrl}`;
