@@ -4,8 +4,8 @@ const request = require('request');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use('/https://api-web.nhle.com', (req, res) => {
-    const apiUrl = req.url;  // Dit zal het pad en de query parameters vastleggen
+app.use('/proxy', (req, res) => {
+    const apiUrl = req.url.replace('/proxy/', '');  // Verwijder het /proxy/ gedeelte van de URL
     const fullUrl = `https://api-web.nhle.com${apiUrl}`;
     
     console.log(`Proxying request to: ${fullUrl}`);  // Debugging regel
