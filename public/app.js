@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Team button found');
       teamButton.addEventListener('click', () => {
           console.log('Team button clicked');
-          fetch('http://localhost:8080/https://api-web.nhle.com/v1/club-stats/NSH/20232024/2')
+          fetch('https://hz-challenge-api-nhl.onrender.com:10000/https://api-web.nhle.com/v1/club-stats/NSH/20232024/2')
               .then(response => response.json())
               .then(data => {
                   console.log('Data fetched:', data);
