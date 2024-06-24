@@ -72,14 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <th class="border px-4 py-2 border-black">Points</th>
         <th class="border px-4 py-2 border-black">Plus/Minus</th>
         <th class="border px-4 py-2 border-black">Penalty Minutes</th>
-        // <th class="border px-4 py-2 border-black">Power Play Goals</th>
-        // <th class="border px-4 py-2 border-black">Shorthanded Goals</th>
-        // <th class="border px-4 py-2 border-black">Game Winning Goals</th>
-        // <th class="border px-4 py-2 border-black">Overtime Goals</th>
         <th class="border px-4 py-2 border-black">Shots</th>
         <th class="border px-4 py-2 border-black">Shooting %</th>
-        // <th class="border px-4 py-2 border-black">Time On Ice (avg)</th>
-        // <th class="border px-4 py-2 border-black">Shifts (avg)</th>
         <th class="border px-4 py-2 border-black">Faceoff Win %</th>
       </tr>
     </thead>
@@ -94,14 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <td class="border px-4 py-2 border-black">${player.points}</td>
           <td class="border px-4 py-2 border-black">${player.plusMinus}</td>
           <td class="border px-4 py-2 border-black">${player.penaltyMinutes}</td>
-          // <td class="border px-4 py-2 border-black">${player.powerPlayGoals}</td>
-          // <td class="border px-4 py-2 border-black">${player.shorthandedGoals}</td>
-          // <td class="border px-4 py-2 border-black">${player.gameWinningGoals}</td>
-          // <td class="border px-4 py-2 border-black">${player.overtimeGoals}</td>
           <td class="border px-4 py-2 border-black">${player.shots}</td>
           <td class="border px-4 py-2 border-black">${(player.shootingPctg * 100).toFixed(2)}%</td>
-          // <td class="border px-4 py-2 border-black">${player.avgTimeOnIcePerGame.toFixed(2)}</td>
-          // <td class="border px-4 py-2 border-black">${player.avgShiftsPerGame.toFixed(2)}</td>
           <td class="border px-4 py-2 border-black">${(player.faceoffWinPctg * 100).toFixed(2)}%</td>
         </tr>
       `).join('')}
