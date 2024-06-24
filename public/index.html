@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NHL App</title>
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <div class="grid grid-cols-2 gap-4">
+      <div id="standings" class="bg-lightred-200 p-4 rounded-lg">Standings per Season</div>
+      <div id="team" class="bg-gray-200 p-4 rounded-lg cursor-pointer" onclick="navigateToTeamPage()">Team Stats</div>
+      <div id="schedule" class="bg-lightred-200 p-4 rounded-lg">Schedule</div>
+      <div id="stats" class="bg-lightred-200 p-4 rounded-lg">Current Stats</div>
+    </div>
+  </div>
+  <script>
+    function navigateToTeamPage() {
+      window.location.href = "team.html";
+    }
+  </script>
+</body>
+</html>
