@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedTeam = teams.find(team => team.abbreviation === selectedTeamAbbreviation);
 
       if (selectedTeam) {
-        fetch(`https://hz-challenge-api-nhl.onrender.com:10000/https://api-web.nhle.com/v1/club-stats/${selectedTeamAbbreviation}/20232024/2`)
+        fetch(`https://hz-challenge-api-nhl-v2.onrender.com/proxy/v1/club-stats/${selectedTeamAbbreviation}/20232024/2`)
           .then(response => response.json())
           .then(data => {
             console.log('Data fetched:', data);
