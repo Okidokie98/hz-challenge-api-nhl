@@ -60,54 +60,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const teamStats = document.getElementById('team-stats');
             teamStats.innerHTML = `
-              <h2 class="text-xl mb-2">Team: ${selectedTeam.fullName}</h2>
-              <table class="table-auto w-full text-left">
-                <thead>
-                  <tr>
-                    <th class="border px-4 py-2">Name</th>
-                    <th class="border px-4 py-2">Position</th>
-                    <th class="border px-4 py-2">Games Played</th>
-                    <th class="border px-4 py-2">Goals</th>
-                    <th class="border px-4 py-2">Assists</th>
-                    <th class="border px-4 py-2">Points</th>
-                    <th class="border px-4 py-2">Plus/Minus</th>
-                    <th class="border px-4 py-2">Penalty Minutes</th>
-                    <th class="border px-4 py-2">Power Play Goals</th>
-                    <th class="border px-4 py-2">Shorthanded Goals</th>
-                    <th class="border px-4 py-2">Game Winning Goals</th>
-                    <th class="border px-4 py-2">Overtime Goals</th>
-                    <th class="border px-4 py-2">Shots</th>
-                    <th class="border px-4 py-2">Shooting %</th>
-                    <th class="border px-4 py-2">Time On Ice (avg)</th>
-                    <th class="border px-4 py-2">Shifts (avg)</th>
-                    <th class="border px-4 py-2">Faceoff Win %</th>
-                  </tr>
-                </thead>
-                <tbody id="player-table-body">
-                  ${players.map(player => `
-                    <tr>
-                      <td>${player.firstName.default} ${player.lastName.default}</td>
-                      <td>${player.positionCode}</td>
-                      <td>${player.gamesPlayed}</td>
-                      <td>${player.goals}</td>
-                      <td>${player.assists}</td>
-                      <td>${player.points}</td>
-                      <td>${player.plusMinus}</td>
-                      <td>${player.penaltyMinutes}</td>
-                      <td>${player.powerPlayGoals}</td>
-                      <td>${player.shorthandedGoals}</td>
-                      <td>${player.gameWinningGoals}</td>
-                      <td>${player.overtimeGoals}</td>
-                      <td>${player.shots}</td>
-                      <td>${(player.shootingPctg * 100).toFixed(2)}%</td>
-                      <td>${player.avgTimeOnIcePerGame.toFixed(2)}</td>
-                      <td>${player.avgShiftsPerGame.toFixed(2)}</td>
-                      <td>${(player.faceoffWinPctg * 100).toFixed(2)}%</td>
-                    </tr>
-                  `).join('')}
-                </tbody>
-              </table>
-            `;
+  <h2 class="text-xl mb-2">Team: ${selectedTeam.fullName}</h2>
+  <table class="table-auto w-full text-left border border-collapse border-black">
+    <thead>
+      <tr>
+        <th class="border px-4 py-2 border-black">Name</th>
+        <th class="border px-4 py-2 border-black">Position</th>
+        <th class="border px-4 py-2 border-black">Games Played</th>
+        <th class="border px-4 py-2 border-black">Goals</th>
+        <th class="border px-4 py-2 border-black">Assists</th>
+        <th class="border px-4 py-2 border-black">Points</th>
+        <th class="border px-4 py-2 border-black">Plus/Minus</th>
+        <th class="border px-4 py-2 border-black">Penalty Minutes</th>
+        <th class="border px-4 py-2 border-black">Power Play Goals</th>
+        <th class="border px-4 py-2 border-black">Shorthanded Goals</th>
+        <th class="border px-4 py-2 border-black">Game Winning Goals</th>
+        <th class="border px-4 py-2 border-black">Overtime Goals</th>
+        <th class="border px-4 py-2 border-black">Shots</th>
+        <th class="border px-4 py-2 border-black">Shooting %</th>
+        <th class="border px-4 py-2 border-black">Time On Ice (avg)</th>
+        <th class="border px-4 py-2 border-black">Shifts (avg)</th>
+        <th class="border px-4 py-2 border-black">Faceoff Win %</th>
+      </tr>
+    </thead>
+    <tbody id="player-table-body">
+      ${players.map(player => `
+        <tr>
+          <td class="border px-4 py-2 border-black">${player.firstName.default} ${player.lastName.default}</td>
+          <td class="border px-4 py-2 border-black">${player.positionCode}</td>
+          <td class="border px-4 py-2 border-black">${player.gamesPlayed}</td>
+          <td class="border px-4 py-2 border-black">${player.goals}</td>
+          <td class="border px-4 py-2 border-black">${player.assists}</td>
+          <td class="border px-4 py-2 border-black">${player.points}</td>
+          <td class="border px-4 py-2 border-black">${player.plusMinus}</td>
+          <td class="border px-4 py-2 border-black">${player.penaltyMinutes}</td>
+          <td class="border px-4 py-2 border-black">${player.powerPlayGoals}</td>
+          <td class="border px-4 py-2 border-black">${player.shorthandedGoals}</td>
+          <td class="border px-4 py-2 border-black">${player.gameWinningGoals}</td>
+          <td class="border px-4 py-2 border-black">${player.overtimeGoals}</td>
+          <td class="border px-4 py-2 border-black">${player.shots}</td>
+          <td class="border px-4 py-2 border-black">${(player.shootingPctg * 100).toFixed(2)}%</td>
+          <td class="border px-4 py-2 border-black">${player.avgTimeOnIcePerGame.toFixed(2)}</td>
+          <td class="border px-4 py-2 border-black">${player.avgShiftsPerGame.toFixed(2)}</td>
+          <td class="border px-4 py-2 border-black">${(player.faceoffWinPctg * 100).toFixed(2)}%</td>
+        </tr>
+      `).join('')}
+    </tbody>
+  </table>
+`;
+
           })
           .catch(error => console.error('Error fetching data:', error));
       }
