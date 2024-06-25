@@ -1,3 +1,17 @@
+De pagina werkt eindelijk op render, gebruik deze link: https://hz-challenge-api-nhl-v2.onrender.com/ 
+Voor mijn eigen github repo ga naar deze link: https://github.com/Okidokie98/hz-challenge-api-nhl
+
+Tenopzichte van het orginele design heb ik de logo's niet meer gerenderd, deze zitten niet in de API dus dan had ik ze handmatig moeten toevoegen.
+
+De 4 knoppen op de hoofdpagina zijn nog steeds conform het design
+
+
+
+
+
+
+---------------------------------------------------------------
+
 API Info: https://github.com/Zmalski/NHL-API-Reference
 
 This app has been made by: Brandon "Okidokie98" de Baat
