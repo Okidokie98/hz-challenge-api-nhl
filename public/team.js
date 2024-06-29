@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </tbody>
   </table>
 `;
-
           })
           .catch(error => console.error('Error fetching data:', error));
       }
